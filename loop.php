@@ -1,5 +1,6 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
-<?php if (!have_posts()) : ?>
+<?php $blog_article = new WP_Query('&cat=0'); ?>
+<?php if (!$blog_article->have_posts()) : ?>
 	<div class="notice">
 		<p class="bottom"><?php _e('Sorry, no results were found.', 'roots'); ?></p>
 	</div>
@@ -8,12 +9,12 @@
 <?php endif; ?>
 
 <?php /* Start loop */ ?>
-<?php while (have_posts()) : the_post(); ?>
+<?php while ($blog_article->have_posts()) : $blog_article->the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<time pubdate datetime="<?php the_time('c'); ?>"><?php printf( __('Posted on %s at %s.','roots'), get_the_time('l, F jS, Y'), get_the_time()) ?></time>
+				<time pubdate datetime="<?php the_time('c'); ?>"><?php printf( __('%s %s','roots'), get_the_date(), get_the_time()) ?></time>
 				<?php if (get_option('roots_post_author') == 'checked') { ?>
 				<p class="byline author vcard">
 					<?php _e('Written by', 'roots');?> <span class="fn"><?php the_author(); ?></span>
@@ -29,10 +30,9 @@
 			</div>
 			<footer>
 				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
+				<a href="<?php comments_link(); ?>">コメント：<?php comments_number('0', '1', '%s'); ?></a>
 			</footer>
 		</article>
-
-		<?php comments_template('', true); ?>
 
 <?php endwhile; // End the loop ?>
 
