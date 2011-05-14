@@ -66,6 +66,8 @@ function get_roots_stylesheets() {
 		$styles .= "\t<!--[if lt IE 8]><link rel=\"stylesheet\" href=\"$template_uri/css/1140/ie.css\"><![endif]-->\n";
 	}
 
+	$styles .= "\t<link rel=\"stylesheet\" href=\"$template_uri/css/sub_style.css\">\n";
+
 	return $styles;
 }
 	
