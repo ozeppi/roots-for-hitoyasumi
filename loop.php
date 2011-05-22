@@ -1,5 +1,9 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
+<?php if (is_front_page()) : ?>
+<?php $blog_article = new WP_Query('&cat=0&posts_per_page=1'); ?>
+<?php else : ?>
 <?php $blog_article = new WP_Query('&cat=0'); ?>
+<?php endif; ?>
 <?php if (!$blog_article->have_posts()) : ?>
 	<div class="notice">
 		<p class="bottom"><?php _e('Sorry, no results were found.', 'roots'); ?></p>
@@ -14,7 +18,7 @@
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<time pubdate datetime="<?php the_time('c'); ?>"><?php printf( __('%s %s','roots'), get_the_date(), get_the_time()) ?></time>
+				<time class="text-right" pubdate datetime="<?php the_time('c'); ?>"><?php printf( __('%s %s','roots'), get_the_date(), get_the_time()) ?></time>
 				<?php if (get_option('roots_post_author') == 'checked') { ?>
 				<p class="byline author vcard">
 					<?php _e('Written by', 'roots');?> <span class="fn"><?php the_author(); ?></span>
@@ -25,12 +29,12 @@
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
 			<?php the_excerpt(); ?>
 	<?php else : ?>
-			<?php the_content('Continue&hellip;'); ?>
+			<?php the_content('続きを読む'); ?>
 	<?php endif; ?>
 			</div>
-			<footer>
+			<footer class="text-right">
 				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
-				<a href="<?php comments_link(); ?>">コメント：<?php comments_number('0', '1', '%s'); ?></a>
+				カテゴリ：<?php the_category(' '); ?>&nbsp;|&nbsp;<a href="<?php comments_link(); ?>" class="text-right">コメント：<?php comments_number('0', '1', '%s'); ?></a>&nbsp;|&nbsp;<a href="#top">TOPへ</a>
 			</footer>
 		</article>
 

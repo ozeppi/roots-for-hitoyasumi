@@ -1,9 +1,56 @@
+.text-right {
+    text-align: right;
+}
+
+
+.caption h1 {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: url(../img/caption_bg.gif) no-repeat;
+    line-height: 28px;
+    color: #fff;
+
+    /*
+    background: #d9ff66 no-repeat;
+    color: #666666;
+    */
+}
 
 #side_illust {
-    background: url(../img/top.jpg);
-    height: 670px;
+    background: url(../img/side_illust/mizugi.jpg) repeat-y;
+    min-height: 1000px;
 }
 
 .post {
     margin: 0 0 15px 0;
+}
+
+/*
+ * Diary loop
+ */
+
+#article_list article {
+    border: #f0a8a8 1px solid;
+    /* background: #a8f0f0; */
+    background: #fff7cc;
+}
+
+article header {
+    /* background: #D9ff66; */
+    background: #a8f0f0;
+    border-bottom: #f0a8a8 1px solid;
+}
+
+article footer {
+    /* background: #D9ff66; */
+    background: #a8f0f0;
+    border-top: #f0a8a8 1px solid;
+}
+
+/*
+ * Diary
+ */
+.entry-content {
 }

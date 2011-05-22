@@ -4,7 +4,7 @@
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<time class="updated" datetime="<?php the_time('c'); ?>" pubdate><?php printf(__('%s %s', 'roots'), get_the_date(),get_the_time())?></time>
+			<time class="updated text-right" datetime="<?php the_time('c'); ?>" pubdate><?php printf(__('%s %s', 'roots'), get_the_date(),get_the_time())?></time>
 			<?php if (get_option('roots_post_author') == 'checked') { ?>
 			<p class="byline author vcard">
 				<?php _e('Written by', 'roots');?> <span class="fn"><?php the_author(); ?></span>

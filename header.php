@@ -22,6 +22,7 @@
 <?php if (get_option('roots_css_framework') === '1140') { ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/css3-mediaqueries.js"></script>
 <?php } ?>	
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 <?php if (get_option('roots_google_analytics') !== "") { ?>
 	<script>
@@ -39,13 +40,10 @@
 	<?php } ?>	
 		<header id="banner" class="<?php echo roots_container_class; ?>" role="banner">
 			<div class="container">
-				<a id="logo" href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>"></a>
+				<a id="logo" href="<?php echo home_url(); ?>/" name="top"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_<?php if ($_GET['logo'] === 'long') { ?>longways<?php } else { ?>sideways<?php } ?>.png" width="278" height="143" alt="<?php bloginfo('name'); ?>"></a>
 				<nav id="nav-main" class="<?php echo roots_container_class; ?>" role="navigation">
 					<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
 				</nav>
-				<nav id="nav-utility">
-					<?php wp_nav_menu(array('theme_location' => 'utility_navigation')); ?>
-				</nav>				
 			</div>
 		</header>
 	<?php if (get_option('roots_css_framework') === '1140') { ?>
