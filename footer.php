@@ -2,12 +2,12 @@
 		</div><!-- /.row -->
 		<div class="row">
 	<?php } ?>		
-		<footer id="content-info" class="<?php echo roots_container_class; ?>" role="contentinfo">
+		<footer id="content-info" class="<?php echo roots_container_class; ?> last append-bottom" role="contentinfo">
 			<div class="container">
 				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") ) : ?>
 				<?php endif; ?>
 				
-				<p class="copy"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></small></p>
+				<p class="copy text-center"><small>Copyright <?php echo date('Y'); ?> 水城あくあ All rights reserved.</small></p>
 				<?php if (get_option('roots_footer_social_share') == 'checked') { ?>
 				<p class="social">
 					<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php echo home_url('/'); ?>" data-count="horizontal"><?php _e('Tweet', 'roots');?></a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

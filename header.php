@@ -49,6 +49,8 @@
 							<li id="menu-voice"><a href="/wordpress/voice/" title="Voice">Voice</a></li>
 							<li id="menu-niconico"><a href="/wordpress/niconico/" title="Niconico">Niconico</a></li>
 							<li id="menu-diary"><a href="http://mizusiroakua.blog33.fc2.com/" title="Diary" target="_blank">Diary</a></li>
+                            <li id="menu-character"></li>
+                        </ul>
 					</div>
 				</nav>
 			</div>

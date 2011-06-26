@@ -1,5 +1,16 @@
+#content-info {
+    background: #f0a8a8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+}
+
 .text-right {
     text-align: right;
+}
+.text-center {
+    text-align: center;
 }
 
 
@@ -78,3 +89,4 @@ article footer {
 article #respond {
     padding: 5px;
 }
+
