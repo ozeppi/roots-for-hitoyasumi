@@ -19,8 +19,23 @@
 }
 
 #side_illust {
-    background: url(../img/side_illust/mizugi.jpg) repeat-y;
     min-height: 1000px;
+}
+
+#side_illust.side_illust_about {
+    background: url(../img/side_illust/about.jpg) repeat-y;
+}
+
+#side_illust.side_illust_voice {
+    background: url(../img/side_illust/voice.jpg) repeat-y;
+}
+
+#side_illust.side_illust_work {
+    background: url(../img/side_illust/work.jpg) repeat-y;
+}
+
+#side_illust.side_illust_niconico {
+    background: url(../img/side_illust/kimono.jpg) repeat-y;
 }
 
 .post {
@@ -53,4 +68,13 @@ article footer {
  * Diary
  */
 .entry-content {
+    padding: 5px;
+}
+
+#comment {
+    width: 300px;
+}
+
+article #respond {
+    padding: 5px;
 }

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 		<div id="content" class="<?php echo roots_container_class; ?>">	
-			<div id="side_illust" class="span-24 last">
+			<div id="side_illust" class="span-24 last side_illust_<?php echo strtolower(the_title('', '', false)); ?>">
 				<div id="main" class="span-16 prepend-8 last" role="main">
 					<div class="container">
 						<?php get_template_part('loop', 'page'); ?>

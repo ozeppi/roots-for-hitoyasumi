@@ -44,7 +44,11 @@ $(document).ready(function() {
             $(target).css('-webkit-border-radius', '0px').css('border-radius', '0px').css('-moz-border-radius', '0px');
         });
     }
-    getTwitterWidgetInstance('twitter').render().setUser('nico_akua').start();
+    var twitterWidgetElement = $('#twitter');
+    if (twitterWidgetElement.length !== 0) {
+        getTwitterWidgetInstance('twitter').render().setUser('nico_akua').start();
+    }
+    /*
     setTimeout(function (){
         cancelRadius([
             $('#twitter .twtr-doc:first-child'),
@@ -52,4 +56,5 @@ $(document).ready(function() {
             $('#twitter .twtr-popular:first-child')
         ]);
     }, 50);
+    */
 });

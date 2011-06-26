@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Typography */
 html { overflow-y: scroll; }
-body { background: #f0a8a8; font-family: sans-serif; }
+body { background: url(../img/seten022.gif) repeat; font-family: sans-serif; }
 
 a { color: #06c; }
 a:hover, a:focus { color:#09f; }
@@ -75,7 +75,9 @@ input::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
 #logo { float: left; width: 278px; height: 143px; margin: 0 0 16px; padding: 0; }
 
 #nav-main ul { 
+    /*
 	background: #E30021;
+    */
 	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
@@ -92,18 +94,42 @@ input::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
 #nav-main ul li a { 
 	text-decoration: none; 
 	display: block; 
+    /*
 	font-size: 14px; 
 	padding: 8px 16px; 
 	color: #fff; 
 	margin: 0; 
 	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+    */
+    text-indent: -2000px;
+    margin: 0;
+    width: 130px;
+    height: 51px;
+}
+#menu-home {
+    background: url(../img/menu/home.png) no-repeat;
+}
+#menu-about {
+    background: url(../img/menu/about.png) no-repeat;
+}
+#menu-work {
+    background: url(../img/menu/work.png) no-repeat;
+}
+#menu-voice {
+    background: url(../img/menu/voice.png) no-repeat;
+}
+#menu-niconico {
+    background: url(../img/menu/niconico.png) no-repeat;
+}
+#menu-diary {
+    background: url(../img/menu/diary.png) no-repeat;
 }
 #nav-main ul li a:hover, 
 #nav-main ul li.current-menu-item > a, 
 #nav-main ul li.current-menu-parent > a, 
 #nav-main ul li.current-menu-ancestor > a, 
 #nav-main ul li:hover > a { 
-	color: #73C8FF; 
+	color: #73C8FF;
 }
 
 #nav-main ul ul { 

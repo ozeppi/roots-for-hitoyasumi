@@ -40,9 +40,16 @@
 	<?php } ?>	
 		<header id="banner" class="<?php echo roots_container_class; ?>" role="banner">
 			<div class="container">
-				<a id="logo" href="<?php echo home_url(); ?>/" name="top"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_<?php if ($_GET['logo'] === 'long') { ?>longways<?php } else { ?>sideways<?php } ?>.png" width="278" height="143" alt="<?php bloginfo('name'); ?>"></a>
 				<nav id="nav-main" class="<?php echo roots_container_class; ?>" role="navigation">
-					<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
+					<div class="menu">
+						<ul>
+							<li id="menu-home"><a href="/wordpress/" title="Home">Home</a></li>
+							<li id="menu-about"><a href="/wordpress/about/" title="About">About</a></li>
+							<li id="menu-work"><a href="/wordpress/work/" title="Work">Work</a></li>
+							<li id="menu-voice"><a href="/wordpress/voice/" title="Voice">Voice</a></li>
+							<li id="menu-niconico"><a href="/wordpress/niconico/" title="Niconico">Niconico</a></li>
+							<li id="menu-diary"><a href="http://mizusiroakua.blog33.fc2.com/" title="Diary" target="_blank">Diary</a></li>
+					</div>
 				</nav>
 			</div>
 		</header>
