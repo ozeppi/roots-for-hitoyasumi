@@ -43,11 +43,11 @@
 				<nav id="nav-main" class="<?php echo roots_container_class; ?>" role="navigation">
 					<div class="menu">
 						<ul>
-							<li id="menu-home"><a href="/wordpress/" title="Home">Home</a></li>
-							<li id="menu-about"><a href="/wordpress/about/" title="About">About</a></li>
-							<li id="menu-work"><a href="/wordpress/work/" title="Work">Work</a></li>
-							<li id="menu-voice"><a href="/wordpress/voice/" title="Voice">Voice</a></li>
-							<li id="menu-niconico"><a href="/wordpress/niconico/" title="Niconico">Niconico</a></li>
+							<li id="menu-home"><a href="/individual/" title="Home">Home</a></li>
+							<li id="menu-about"><a href="/individual/about/" title="About">About</a></li>
+							<li id="menu-work"><a href="/individual/work/" title="Work">Work</a></li>
+							<li id="menu-voice"><a href="/individual/voice/" title="Voice">Voice</a></li>
+							<li id="menu-niconico"><a href="/individual/niconico/" title="Niconico">Niconico</a></li>
 							<li id="menu-diary"><a href="http://mizusiroakua.blog33.fc2.com/" title="Diary" target="_blank">Diary</a></li>
                             <li id="menu-character"></li>
                         </ul>

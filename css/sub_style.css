@@ -13,22 +13,6 @@
     text-align: center;
 }
 
-
-.caption h1 {
-    width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background: url(../img/caption_bg.gif) no-repeat;
-    line-height: 28px;
-    color: #fff;
-
-    /*
-    background: #d9ff66 no-repeat;
-    color: #666666;
-    */
-}
-
 #side_illust {
     min-height: 1000px;
 }
@@ -90,3 +74,10 @@ article #respond {
     padding: 5px;
 }
 
+/*
+ * Work
+ */
+.item_label {
+    color: #fa8080;
+    font-weight: bold;
+}
